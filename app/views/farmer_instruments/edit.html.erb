@@ -1,0 +1,31 @@
+Hello World
+
+<u><h1>Edit Ads Information<u></h1>
+
+<%= form_with(model: @edit, local: true) do |form| %>
+<p>
+    <%= form.label :rent_per_hour %><br>
+    <%= form.text_field :rent_per_hour %>
+</p>
+
+<p>
+    <%= form.label :deposit %>
+    <%= form.text_field :deposit %>>
+</p>
+
+<p>
+    <%= form.label :Instrument_Available_From%>
+    <%= form.date_field :available_from%>
+</p>
+
+<p>
+    <%= form.label :Instrument_Available_To%>
+    <%= form.date_field :available_to%>
+
+</p>
+
+ <p>
+        <%= form.submit %>
+    </p>
+
+<% end%>

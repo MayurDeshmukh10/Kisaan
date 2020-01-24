@@ -1,0 +1,40 @@
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+<html>
+    <body>
+        <center><u><h2>Details of Instrument and Farmer</h1></u></center>
+        <table class='table'>
+            <tr> 
+                <th scope="col">Farmer ID</th>
+                <th scope="col">Farmer Name</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Email</th>
+                <th scope="col">Full Address</th>
+                <th scope="col">Instrument Name</th>
+                <th scope="col">Instrument Brand</th>
+                <th scope="col">Instrument Specification</th>
+            </tr>
+            
+            <tr>
+                <td scope="row"><%= @details.farmer_id%></td>
+                <td scope="row"><%= @details.farmer.full_name%></td>
+                <td scope="row"><%= @details.farmer.mobile_number%></td>
+                <td scope="row"><%= @details.farmer.email%></td>
+                <td scope="row"><%= @add.city%></td>
+                <td scope="row"><%= @details.instrument.name%></td>
+                <td  scope="row"><%= @details.instrument.brand%></td>
+                <td scope="row"><%= @details.instrument.specifications%></td>
+        
+            </tr>
+        
+        </table>
+
+    </body>
+</html>

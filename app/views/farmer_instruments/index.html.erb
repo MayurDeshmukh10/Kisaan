@@ -1,0 +1,48 @@
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+<html>
+    <body>
+        <center><u><h1>List of Available Instruments</h1></u></center>
+        <table class="table ">
+            <tr> 
+                <th scope="col">Advertisment ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Instrument Name </th>
+                <th scope="col">Rent Per Hour</th>
+                <th scope="col">Deposit</th>
+                <th scope="col">Is Available</th>
+                <th scope="col">Available From</th>
+                <th scope="col">Available To</th>
+                <th scope="col">View Details</th>
+                <th scope="col">Edit Details</th>
+            </tr>
+            <% @ads.each do |ad|%>
+            <tr>
+                <td scope="row"><%= ad.id%></td>
+                <td scope="row"><%= ad.farmer.full_name %></td>
+                <td scope="row"><%= ad.instrument.name%></td> 
+                <td scope="row"><%= ad.rent_per_hour%>
+                <td scope="row"><%= ad.deposit%></td>
+                <td scope="row"><%= ad.is_available%></td>
+                <td scope="row"><%= ad.available_from%></td>
+                <td scope="row"><%= ad.available_to%></td>
+                <td  scope="row"><%= link_to 'More Details', farmer_instrument_path(ad.farmer_id) %></td>
+                <td scope="row"><%= link_to 'Edit Details', edit_farmer_instrument_path(ad.id) %></td>
+            </tr>
+            <% end%>
+        </table>
+
+
+        <center><p><%= link_to "Add New Ad",new_farmer_instrument_path()%></p></center>
+
+        
+ 
+    </body>
+</html>

@@ -1,0 +1,67 @@
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+
+<center><u><h1> Create New Advertisment</h1></u></center>
+    <div class="form-group">
+        <center><%= form_with scope: :farmer_instrument,url: farmer_instruments_path ,local: true   do |form| %>
+        <p>
+            <%=form.select(:farmer_id,@farmer_list,:prompt=> 'Select Farmer')%>
+        </p>
+        <p>
+            <%= form.select(:instrument_id,@instrument_list,:prompt=> 'Select Instrument')%>
+        </p>
+        <p>
+            <%= form.label :rent_per_hour %><br>
+            <%= form.text_field :rent_per_hour %>
+        </p>
+        <p>
+            <%= form.label :Instrument_Available_to%>
+            <%= form.date_field :available_from%>
+        </p>
+        <p>
+            <%= form.label :Instrument_Available_From%>
+            <%= form.date_field :available_to%>
+        </p>
+    
+        
+    
+    <p>
+        <%= form.label :deposit %><br>
+        <%= form.text_field :deposit %>
+    </p>
+    
+    <p>
+        <%= form.submit %>
+    </p>
+    </div>
+    <% end %>
+    </center>
+         
+
+
+
+<!--<form>
+,
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname"><br>
+            Instrument Name :<br>
+            <input type="text" name="instrument_name"><br>
+            Instrument Brand :<br>
+            <input type="text" name="instrument_brand"><br>
+            Rent Per Hour :<br>
+            <input type="text" name="rent_per_hour"><br>
+            Deposit :<br>
+            <input type="text" name="deposit"><br>
+        </form>
+
+        !-->
+        

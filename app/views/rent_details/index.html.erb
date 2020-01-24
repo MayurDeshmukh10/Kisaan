@@ -1,0 +1,10 @@
+<html>
+    <body>
+
+    <% @farmers.each do |farmer|%>
+
+    <p><%= farmer.full_name %> Owned Instrument count <%= @FI.where(farmer_id: farmer.id).count%>, Borrowed instrument count = <%= @rent.where(farmer_id: farmer.id).count%></p>
+
+    <% end%>
+</body>
+</html>

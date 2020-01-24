@@ -1,0 +1,32 @@
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+<html>
+    <body>
+        <center><u><h2>Details of Farmer</h1></u></center>
+        <table class='table'>
+            <tr> 
+                <th scope="col">Farmer ID</th>
+                <th scope="col">Farmer Name</th>
+                <th scope="col">Mobile Number</th>
+                <th scope="col">Email</th>
+            </tr>
+            
+            <tr>
+                <td scope="row"><%= @details.id%></td>
+                <td scope="row"><%= @details.full_name%></td>
+                <td scope="row"><%= @details.mobile_number%></td>
+                <td scope="row"><%= @details.email%></td>
+        
+            </tr>
+        
+        </table>
+
+    </body>
+</html>

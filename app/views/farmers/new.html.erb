@@ -1,0 +1,61 @@
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+
+<center><u><h1>Add New Farmer</h1></u></center>
+    <div class="form-group">
+        <center><%= form_with scope: :farmers ,url: farmers_path,local: true   do |form| %>
+        <p>
+            <%= form.label :first_name  %><br>
+            <%= form.text_field :first_name %>
+        </p>
+
+        <p>
+            <%= form.label :last_name  %><br>
+            <%= form.text_field :last_name %>
+        </p>
+
+        <p>
+            <%= form.label :mobile_number %><br>
+            <%= form.number_field :mobile_number %>
+        </p>
+        <p>
+            <%= form.label :email  %><br>
+            <%= form.email_field :email %>
+        </p>
+
+    
+    <p>
+        <%= form.submit %>
+    </p>
+    </div>
+    <% end %>
+    </center>
+         
+
+
+
+<!--<form>
+,
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname"><br>
+            Instrument Name :<br>
+            <input type="text" name="instrument_name"><br>
+            Instrument Brand :<br>
+            <input type="text" name="instrument_brand"><br>
+            Rent Per Hour :<br>
+            <input type="text" name="rent_per_hour"><br>
+            Deposit :<br>
+            <input type="text" name="deposit"><br>
+        </form>
+
+        !-->
+        
